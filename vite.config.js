@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/Memoircraft-Front",
+  base: "/", // Set this to "/" if deploying to the root
 })
