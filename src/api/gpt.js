@@ -1,6 +1,6 @@
 export const CallGPT = async ({ prompt }) => {
     try {
-        const response = await fetch('https://memoircraft-back-4f3b04d8a73c.herokuapp.com', { 
+        const response = await fetch('https://memoircraft-back-4f3b04d8a73c.herokuapp.com/api/generate', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
