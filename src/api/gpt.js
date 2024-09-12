@@ -1,11 +1,11 @@
 export const CallGPT = async ({ prompt }) => {
     try {
-        const response = await fetch('http://localhost:5001/api/generate', {
+        const response = await fetch('https://memoircraft-back-4f3b04d8a73c.herokuapp.com', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ prompt }), // Send the prompt to your backend
+            body: JSON.stringify({ prompt }),
         });
 
         if (!response.ok) {
@@ -13,7 +13,7 @@ export const CallGPT = async ({ prompt }) => {
         }
 
         const data = await response.json();
-        return data; // This will be the content returned by the backend
+        return data;
     } catch (error) {
         console.error('There was an error with the API call:', error);
         return null;
